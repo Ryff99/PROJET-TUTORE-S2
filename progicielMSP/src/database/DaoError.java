@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package progicielmsp;
+package database;
 
 /**
  *
  * @author Robin
  */
-public class User {
+public class DaoError {
     
 }
