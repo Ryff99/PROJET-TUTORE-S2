@@ -9,6 +9,6 @@ package ihm;
  *
  * @author Robin
  */
-public class MainWindow {
+public class MainWindow extends javax.swing.JFrame{
     
 }

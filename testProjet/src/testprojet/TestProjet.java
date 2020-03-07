@@ -23,25 +23,38 @@ public class TestProjet {
         Statement state = cnx.createStatement();
       //L'objet ResultSet contient le résultat de la requête SQL
       ResultSet result = state.executeQuery("SELECT * FROM livre;");
-      //On récupère les MetaData
+      //On récupère les MetaData (les informations sur les données = le nom des colonnes)
       ResultSetMetaData resultMeta = result.getMetaData();
          
       System.out.println("\n**********************************");
       //On affiche le nom des colonnes
-      for(int i = 1; i <= resultMeta.getColumnCount(); i++)
-        System.out.print("\t" + resultMeta.getColumnName(i).toUpperCase() + "\t *");
+      for(int i = 1; i <= resultMeta.getColumnCount(); i++){
+          System.out.print("\t" + resultMeta.getColumnName(i).toUpperCase() + "\t *");
+      }
          
       System.out.println("\n**********************************");
          
       while(result.next()){         
-        for(int i = 1; i <= resultMeta.getColumnCount(); i++)
-          System.out.print("\t" + result.getObject(i).toString() + "\t |");
+        for(int i = 1; i <= resultMeta.getColumnCount(); i++){
+            System.out.print("\t" + result.getObject(i).toString() + "\t |");
+            
+        }
+          
+            
            
         System.out.println("\n---------------------------------");
         
       }
-      String s = result.getObject(2).toString();
-      System.out.println(s);
+      
+     
+      
+      FrameTest t = new FrameTest();
+      result.first();
+      t.initCB1(result);
+      
+      
+      
+      
       
     }
     

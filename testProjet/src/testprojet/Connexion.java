@@ -22,6 +22,7 @@ public class Connexion {
             System.out.println("Connexion effectuée");
             return con;
         }catch(Exception e){ 
+            System.out.println("Connexion impossible : serveur non disponible");
             e.printStackTrace();
             return null;
         }

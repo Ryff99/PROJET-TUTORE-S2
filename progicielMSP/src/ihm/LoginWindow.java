@@ -9,6 +9,6 @@ package ihm;
  *
  * @author Robin
  */
-public class LoginWindow {
+public class LoginWindow extends{
     
 }
